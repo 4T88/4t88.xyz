@@ -1,0 +1,8 @@
+            - name: Zola Buikd
+  # You may pin to the exact commit or the version.
+  # uses: crowselectromusic/zola-build@8f25ca616ddf51c83277b30df7c1a123951c9bb5
+  uses: crowselectromusic/zola-build@1.2.0
+  with:
+    # Zola directory
+    root: # optional, default is .
+          
