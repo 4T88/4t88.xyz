@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Donate - 4T88.xyz{% endblock title %}
+
+{% block extra_head %}
+<script>
+function copyToClipboard(text, button) {
+    navigator.clipboard.writeText(text).then(() => {
+        const original = button.textContent;
+        button.textContent = 'Copied!';
+        button.style.background = '#4CAF50';
+        setTimeout(() => {
+            button.textContent = original;
+            button.style.background = '';
+        }, 1500);
+    });
+}
+</script>
+{% endblock extra_head %}
+
+{% block content %}
+    <div style="margin-bottom:2em;">{{ section.content | safe }}</div>
+    <div class="crypto-container">
+        <div class="crypto-item">
+            <h2>[ethereum]</h2>
+            <p style="word-break: break-all;">0x2499518fB7f483B1b49EE7EC609c6d9Ad9C862Eb
+                <button onclick="copyToClipboard('0x2499518fB7f483B1b49EE7EC609c6d9Ad9C862Eb', this)" style="margin-left:10px;cursor:pointer;">Copy</button>
+            </p>
+        </div>
+        <div class="crypto-item">
+            <h2>[monero]</h2>
+            <p style="word-break: break-all;">47D5FnuuZj4bAcrcMgEZFs3LoHU82YTNaASKu9Tt5cfVQncJFu54M3mC1id2tLCx6QGGD3Ccr32rBVz6tL9U5qiKNePEgDb
+                <button onclick="copyToClipboard('47D5FnuuZj4bAcrcMgEZFs3LoHU82YTNaASKu9Tt5cfVQncJFu54M3mC1id2tLCx6QGGD3Ccr32rBVz6tL9U5qiKNePEgDb', this)" style="margin-left:10px;cursor:pointer;">Copy</button>
+            </p>
+        </div>
+    </div>
+    <div class="crypto-container" style="margin-top:2em;">
+        <h2>Monero (XMR) - Private Donations</h2>
+        <p>Monero is a privacy-focused cryptocurrency. Use the address above to send anonymous donations. Thank you for supporting privacy!</p>
+    </div>
+{% endblock content %} 

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - 4T88.xyz{% endblock title %}
+
+{% block content %}
+    <div style="margin-bottom:2em;">{{ section.content | safe }}</div>
+    <ul>
+    {% for page in section.pages %}
+        <li>
+            <a href="{{ page.permalink }}">{{ page.title }}</a> <small>{{ page.date | date(format="%Y-%m-%d") }}</small>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock content %} 

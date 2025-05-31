@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - 4T88.xyz{% endblock title %}
+
+{% block content %}
+    <h1>{{ page.title }}</h1>
+    <p><small>{{ page.date | date(format="%Y-%m-%d") }}</small></p>
+    <div style="margin-top: 2em;">
+        {{ page.content | safe }}
+    </div>
+{% endblock content %} 

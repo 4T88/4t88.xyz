@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://4t88.github.io/4t88.xyz/sitemap.xml

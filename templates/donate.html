@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Donate - 4T88.xyz{% endblock title %}
+
+{% block extra_head %}
+<script>
+function copyToClipboard(text, element) {
+    navigator.clipboard.writeText(text).then(() => {
+        const originalText = element.textContent;
+        element.textContent = 'Copied!';
+        element.style.color = '#4CAF50';
+        setTimeout(() => {
+            element.textContent = originalText;
+            element.style.color = '';
+        }, 2000);
+    });
+}
+</script>
+{% endblock extra_head %}
+
+{% block content %}
+    <div style="margin-bottom:2em;">{{ section.content | safe }}</div>
+    <div class="crypto-container">
+        <div class="crypto-item">
+            <h2>[litecoin]</h2>
+            <p onclick="copyToClipboard('LeCerBDWv6XBryf8Gyzx8vfJPmZVs9Xscc', this)" style="cursor: pointer;" title="Click to copy">LeCerBDWv6XBryf8Gyzx8vfJPmZVs9Xscc</p>
+        </div>
+        <div class="crypto-item">
+            <h2>[ethereum]</h2>
+            <p onclick="copyToClipboard('0x586cBC6F66768A9f7AE035b782097eF923a5e261', this)" style="cursor: pointer;" title="Click to copy">0x586cBC6F66768A9f7AE035b782097eF923a5e261</p>
+        </div>
+        <div class="crypto-item">
+            <h2>[monero]</h2>
+            <p onclick="copyToClipboard('44VZWfQzzin3USQAjFZtaVXnB8ukXAH1XMFXZEnoWGzCMG6MwdGrXV9Pzk9EfNDrZYfXSHgsAxrrc8M9uRpPKZFoEDdBQXd', this)" style="cursor: pointer;" title="Click to copy">44VZWfQzzin3USQAjFZtaVXnB8ukXAH1XMFXZEnoWGzCMG6MwdGrXV9Pzk9EfNDrZYfXSHgsAxrrc8M9uRpPKZFoEDdBQXd</p>
+        </div>
+    </div>
+{% endblock content %} 
