@@ -34,4 +34,20 @@ function copyToClipboard(text, element) {
             <p onclick="copyToClipboard('44VZWfQzzin3USQAjFZtaVXnB8ukXAH1XMFXZEnoWGzCMG6MwdGrXV9Pzk9EfNDrZYfXSHgsAxrrc8M9uRpPKZFoEDdBQXd', this)" style="cursor: pointer;" title="Click to copy">44VZWfQzzin3USQAjFZtaVXnB8ukXAH1XMFXZEnoWGzCMG6MwdGrXV9Pzk9EfNDrZYfXSHgsAxrrc8M9uRpPKZFoEDdBQXd</p>
         </div>
     </div>
-{% endblock content %} 
+{% endblock content %}
+
+{% block sidebar %}
+<nav class="side-nav">
+  <ul>
+    <li><a href="/">about</a></li>
+    <li><a href="/posts/">blog</a></li>
+    <li><a href="/donate/">donate</a></li>
+    <li><a href="https://github.com/4t88">github</a></li>
+    <li><a href="mailto:4t88@protonmail.com">email</a></li>
+    <li><a href="https://matrix.to/#/@4t88:matrix.org">matrix</a></li>
+  </ul>
+</nav>
+<hr>
+<b>contact</b><br>
+4t88@protonmail.com
+{% endblock sidebar %} 

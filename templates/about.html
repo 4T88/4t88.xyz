@@ -4,4 +4,14 @@
 
 {% block content %}
     {{ section.content | safe }}
-{% endblock content %} 
+{% endblock content %}
+
+{% block sidebar %}
+<nav class="side-nav">
+  <ul>
+    <li><a href="/">about</a></li>
+    <li><a href="/posts/">blog</a></li>
+  </ul>
+</nav>
+<hr>
+{% endblock sidebar %} 

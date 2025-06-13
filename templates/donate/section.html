@@ -3,15 +3,75 @@
 {% block title %}Donate - 4T88.xyz{% endblock title %}
 
 {% block extra_head %}
+<style>
+.crypto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    background: #181818;
+    border: 2px solid #d9d8d9;
+    border-radius: 16px;
+    padding: 2em 2em 1.5em 2em;
+    box-shadow: 0 0 24px 0 #000a;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.crypto-item {
+    width: 100%;
+    text-align: center;
+}
+.crypto-item h2 {
+    color: #d9d8d9;
+    margin-bottom: 0.5em;
+}
+.crypto-address {
+    font-family: 'Courier New', Courier, monospace;
+    color: #d9d8d9;
+    background: #232226;
+    border-radius: 8px;
+    padding: 0.7em 1em;
+    margin-bottom: 0.5em;
+    word-break: break-all;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.1em;
+}
+.copy-btn {
+    margin-left: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    background: #232226;
+    color: #d9d8d9;
+    border: 2px solid #d9d8d9;
+    border-radius: 8px;
+    padding: 0.4em 1.2em;
+    font-size: 1em;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 1;
+}
+.copy-btn:hover {
+    background: #d9d8d9;
+    color: #232226;
+    border: 2px solid #232226;
+}
+</style>
 <script>
 function copyToClipboard(text, button) {
     navigator.clipboard.writeText(text).then(() => {
         const original = button.textContent;
         button.textContent = 'Copied!';
-        button.style.background = '#4CAF50';
+        button.style.background = '#d9d8d9';
+        button.style.color = '#181818';
         setTimeout(() => {
             button.textContent = original;
             button.style.background = '';
+            button.style.color = '';
         }, 1500);
     });
 }
@@ -23,19 +83,21 @@ function copyToClipboard(text, button) {
     <div class="crypto-container">
         <div class="crypto-item">
             <h2>[ethereum]</h2>
-            <p style="word-break: break-all;">0x2499518fB7f483B1b49EE7EC609c6d9Ad9C862Eb
-                <button onclick="copyToClipboard('0x2499518fB7f483B1b49EE7EC609c6d9Ad9C862Eb', this)" style="margin-left:10px;cursor:pointer;">Copy</button>
-            </p>
+            <span class="crypto-address">
+                0x81b9bBefCD8784AebC4dA28972CbD73179300CcD
+                <button class="copy-btn" onclick="copyToClipboard('0x81b9bBefCD8784AebC4dA28972CbD73179300CcD', this)">Copy</button>
+            </span>
         </div>
         <div class="crypto-item">
             <h2>[monero]</h2>
-            <p style="word-break: break-all;">47D5FnuuZj4bAcrcMgEZFs3LoHU82YTNaASKu9Tt5cfVQncJFu54M3mC1id2tLCx6QGGD3Ccr32rBVz6tL9U5qiKNePEgDb
-                <button onclick="copyToClipboard('47D5FnuuZj4bAcrcMgEZFs3LoHU82YTNaASKu9Tt5cfVQncJFu54M3mC1id2tLCx6QGGD3Ccr32rBVz6tL9U5qiKNePEgDb', this)" style="margin-left:10px;cursor:pointer;">Copy</button>
-            </p>
+            <span class="crypto-address">
+                8AqL4dyAJ34eSxm2FE7y7pYUzWvmnAqNacHCnNwiyjvu6hgHZUxBzUbUJU2cnnH1vzYhCaGLn6TJFGkMWFiuKZuzDgmB1hi
+                <button class="copy-btn" onclick="copyToClipboard('8AqL4dyAJ34eSxm2FE7y7pYUzWvmnAqNacHCnNwiyjvu6hgHZUxBzUbUJU2cnnH1vzYhCaGLn6TJFGkMWFiuKZuzDgmB1hi', this)">Copy</button>
+            </span>
         </div>
     </div>
-    <div class="crypto-container" style="margin-top:2em;">
+    <div class="crypto-container" style="margin-top:2em; background: none; border: none; box-shadow: none;">
         <h2>Monero (XMR) - Private Donations</h2>
-        <p>Monero is a privacy-focused cryptocurrency. Use the address above to send anonymous donations. Thank you for supporting privacy!</p>
+        <p style="color:#d9d8d9;">Monero is a privacy-focused cryptocurrency. Use the address above to send anonymous donations. Thank you for supporting privacy!</p>
     </div>
 {% endblock content %} 
