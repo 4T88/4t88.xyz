@@ -1,8 +1,4 @@
 # Ignore build output
--public/
-+public/
-
-# Zola output directory
 public/
 
 # OS generated files

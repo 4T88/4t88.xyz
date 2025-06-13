@@ -23,6 +23,7 @@ about = "/about/"
 donate = "/donate/"
 posts = "/posts/"
 
-output_dir = "docs"
+# Remove output_dir as it's handled by GitHub Actions
+# output_dir = "docs"
 
 minify_html = true
