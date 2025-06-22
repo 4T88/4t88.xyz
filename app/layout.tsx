@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   description: "Social links for 4T88",
   viewport: "width=device-width, initial-scale=1",
   icons: {
-    icon: "/4t88.xyz/favicon.png",
-    shortcut: "/4t88.xyz/favicon.png",
-    apple: "/4t88.xyz/favicon.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
     generator: 'v0.dev'
 }

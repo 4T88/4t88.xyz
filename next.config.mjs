@@ -3,8 +3,6 @@ const repoName = '4t88.xyz';
 const nextConfig = {
   output: 'export',
   distDir: 'docs',
-  basePath: `/${repoName}`,
-  assetPrefix: `/${repoName}/`,
   eslint: {
     ignoreDuringBuilds: true,
   },
